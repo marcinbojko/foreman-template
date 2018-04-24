@@ -1,0 +1,897 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": 84,
+  "links": [],
+  "refresh": "30s",
+  "rows": [
+    {
+      "collapse": false,
+      "height": 310,
+      "panels": [
+        {
+          "aliasColors": {
+            "active_hosts": "#052b51",
+            "bad_hosts": "#bf1b00",
+            "ok_hosts": "#508642"
+          },
+          "cacheTimeout": null,
+          "combine": {
+            "label": "Others",
+            "threshold": 0
+          },
+          "datasource": null,
+          "decimals": 0,
+          "fontSize": "80%",
+          "format": "short",
+          "id": 1,
+          "interval": null,
+          "legend": {
+            "header": "",
+            "percentage": true,
+            "percentageDecimals": null,
+            "show": true,
+            "values": true
+          },
+          "legendType": "Under graph",
+          "links": [],
+          "maxDataPoints": "1",
+          "nullPointMode": "connected",
+          "pieType": "donut",
+          "span": 6,
+          "strokeWidth": "1",
+          "targets": [
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "bad_hosts"
+                  ],
+                  "text": "setAlias(bad_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "bad_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ok_hosts"
+                  ],
+                  "text": "setAlias(ok_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "ok_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "out_of_sync_hosts"
+                  ],
+                  "text": "setAlias(out_of_sync_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "outofsync_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "active_hosts"
+                  ],
+                  "text": "setAlias(active_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "active_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "title": "Foreman stats",
+          "transparent": true,
+          "type": "grafana-piechart-panel",
+          "valueName": "current"
+        },
+        {
+          "columns": [
+            {
+              "text": "Current",
+              "value": "current"
+            },
+            {
+              "text": "Max",
+              "value": "max"
+            }
+          ],
+          "datasource": null,
+          "fontSize": "100%",
+          "id": 4,
+          "links": [],
+          "pageSize": null,
+          "scroll": true,
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "span": 6,
+          "styles": [
+            {
+              "alias": "Time",
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 0,
+              "link": false,
+              "pattern": "Time",
+              "type": "number",
+              "unit": "short"
+            },
+            {
+              "alias": "",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "Current",
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            },
+            {
+              "alias": "",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "Max",
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "active_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "bad_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "outofsync_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "ok_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "title": "Panel Title",
+          "transform": "timeseries_aggregations",
+          "type": "table"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fill": 1,
+          "id": 2,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "ok_host",
+              "color": "#508642",
+              "fill": 0,
+              "linewidth": 2
+            },
+            {
+              "alias": "bad_hosts",
+              "color": "#bf1b00",
+              "fill": 0,
+              "linewidth": 2
+            },
+            {
+              "alias": "out_of_sync_hosts",
+              "color": "#5195ce",
+              "fill": 0,
+              "linewidth": 2
+            },
+            {
+              "alias": "total_hosts",
+              "color": "#ba43a9",
+              "fill": 0,
+              "yaxis": 1
+            },
+            {
+              "alias": "active_hosts",
+              "color": "#c15c17",
+              "fill": 0,
+              "linewidth": 2
+            }
+          ],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": true,
+          "targets": [
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ok_host"
+                  ],
+                  "text": "setAlias(ok_host)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "ok_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "bad_hosts"
+                  ],
+                  "text": "setAlias(bad_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "bad_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "out_of_sync_hosts"
+                  ],
+                  "text": "setAlias(out_of_sync_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "outofsync_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "total_hosts"
+                  ],
+                  "text": "setAlias(total_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "total_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Foreman"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "active_hosts"
+                  ],
+                  "text": "setAlias(active_hosts)"
+                }
+              ],
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "foreman.domain.com"
+              },
+              "item": {
+                "filter": "active_hosts"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "custom",
+              "fill": false,
+              "line": true,
+              "lineColor": "rgb(255, 0, 0)",
+              "op": "gt",
+              "source": "zabbix",
+              "value": null
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Foreman stats",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Foreman hosts",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "ackEventColor": "rgb(56, 219, 156)",
+          "customLastChangeFormat": false,
+          "datasources": [
+            "Zabbix"
+          ],
+          "descriptionAtNewLine": false,
+          "descriptionField": true,
+          "fontSize": "100%",
+          "highlightNewEvents": true,
+          "highlightNewerThan": "1h",
+          "hostField": true,
+          "hostGroups": false,
+          "hostTechNameField": false,
+          "hostsInMaintenance": true,
+          "id": 3,
+          "lastChangeFormat": "",
+          "limit": 100,
+          "links": [],
+          "okEventColor": "rgb(56, 189, 113)",
+          "pageSize": 10,
+          "schemaVersion": 4,
+          "severityField": true,
+          "showEvents": {
+            "text": "Problems",
+            "value": "1"
+          },
+          "showTags": true,
+          "showTriggers": "all triggers",
+          "sortTriggersBy": {
+            "text": "last change",
+            "value": "lastchange"
+          },
+          "span": 12,
+          "statusField": true,
+          "targets": {
+            "Zabbix": {
+              "application": {
+                "filter": "Foreman"
+              },
+              "group": {
+                "filter": "Linux servers"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": null
+              }
+            }
+          },
+          "title": "Triggers from Foreman Application",
+          "triggerSeverity": [
+            {
+              "color": "rgb(108, 108, 108)",
+              "priority": 0,
+              "severity": "Not classified",
+              "show": true
+            },
+            {
+              "color": "rgb(120, 158, 183)",
+              "priority": 1,
+              "severity": "Information",
+              "show": true
+            },
+            {
+              "color": "rgb(175, 180, 36)",
+              "priority": 2,
+              "severity": "Warning",
+              "show": true
+            },
+            {
+              "color": "rgb(255, 137, 30)",
+              "priority": 3,
+              "severity": "Average",
+              "show": true
+            },
+            {
+              "color": "rgb(255, 101, 72)",
+              "priority": 4,
+              "severity": "High",
+              "show": true
+            },
+            {
+              "color": "rgb(215, 0, 0)",
+              "priority": 5,
+              "severity": "Disaster",
+              "show": true
+            }
+          ],
+          "type": "alexanderzobnin-zabbix-triggers-panel"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Foreman",
+  "version": 22
+}
